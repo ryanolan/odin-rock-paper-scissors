@@ -67,13 +67,3 @@ function winGame() {
   }
 }
 
-// const playerSelection = getPlayerChoice();
-// console.log(playerSelection);
-// const computerSelection = getComputerChoice();
-// console.log(computerSelection);
-// console.log(playRound(playerSelection, computerSelection));
-// console.log("Player Score: " + playerScore);
-// console.log("Computer Score: " + computerScore);
-
-
-
