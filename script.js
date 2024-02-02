@@ -13,13 +13,17 @@ function getComputerChoice() {
   }
 }
 
-// console.log(getComputerChoice());
-
 function getPlayerChoice() {
-  let playerChoice = prompt("You must choose. Rock, paper, or scissors?");
-  let lowerPlayerChoice = playerChoice.toLowerCase();
-  return lowerPlayerChoice;
+  while (playerScore < 5 && computerScore < 5) {
+    const playerSelection = prompt("You must choose. Rock, paper, or scissors?").toLowerCase();
+    const computerSelection = getComputerChoice();
+    alert(playRound(playerSelection, computerSelection));
+    alert("Player score: " + playerScore + " " + "Computer score: " + computerScore);
+  }
+  winGame();
 }
+
+getPlayerChoice();
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection == "rock") {
@@ -57,17 +61,19 @@ function playRound(playerSelection, computerSelection) {
 
 function winGame() {
   if (playerScore == 5) {
-    return "You win the game!";
+    alert("You win the game!");
   } else if (computerScore == 5) {
-    return "Computer wins the game!";
+    alert("Computer wins the game!");
   }
 }
 
-const playerSelection = getPlayerChoice();
-console.log(playerSelection);
-const computerSelection = getComputerChoice();
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
-console.log("Player Score: " + playerScore);
-console.log("Computer Score: " + computerScore);
+// const playerSelection = getPlayerChoice();
+// console.log(playerSelection);
+// const computerSelection = getComputerChoice();
+// console.log(computerSelection);
+// console.log(playRound(playerSelection, computerSelection));
+// console.log("Player Score: " + playerScore);
+// console.log("Computer Score: " + computerScore);
+
+
 
